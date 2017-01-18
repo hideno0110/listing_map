@@ -36,6 +36,31 @@ class ListingsController < ApplicationController
   def description
     @listing = Listing.find(params[:id])
   end
+  
+  def address
+    @listing = Listing.find(params[:id])
+  end
+
+  def price
+    @listing = Listing.find(params[:id])
+  end
+  
+  def photos
+    @listing = Listing.find(params[:id])
+  end
+  
+  def calendar
+    @listing = Listing.find(params[:id])
+  end
+
+  def bankaccount
+    @listing = Listing.find(params[:id])
+  end
+  
+  def publish
+    @listing = Listing.find(params[:id])
+  end
+
 
   private
   def listing_params
