@@ -1,5 +1,7 @@
 class ListingsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_listing, only: [:basics, :description, :address, :price, :photos, :calendar, :bankaccount, :publish]
+
   def index
   end
 
@@ -9,7 +11,6 @@ class ListingsController < ApplicationController
   def new
     # 現在のユーザーのリスティングの作成
     @listing = current_user.listings.build
-
   end
 
   def create
@@ -30,41 +31,38 @@ class ListingsController < ApplicationController
   end
 
   def basics
-    @listing = Listing.find(params[:id])
+    #basics ~ publishまで同じ項目を記載するのでset_listingでまとめる
+    # @listing = Listing.find(params[:id])
   end
 
   def description
-    @listing = Listing.find(params[:id])
   end
   
   def address
-    @listing = Listing.find(params[:id])
   end
 
   def price
-    @listing = Listing.find(params[:id])
   end
   
   def photos
-    @listing = Listing.find(params[:id])
   end
   
   def calendar
-    @listing = Listing.find(params[:id])
   end
 
   def bankaccount
-    @listing = Listing.find(params[:id])
   end
   
   def publish
-    @listing = Listing.find(params[:id])
   end
-
 
   private
   def listing_params
     params.require(:listing).permit(:home_type, :pet_type, :breeding_years, :pet_size)
+  end
+
+  def set_listing
+    @listing = Listing.find(params[:id])
   end
 
 end
