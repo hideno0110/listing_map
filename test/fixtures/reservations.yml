@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  listing: 
+  start_date: 2017-01-20 13:59:47
+  end_date: 2017-01-20 13:59:47
+  price_@ernight: 1
+  total_price: 1
+
+two:
+  user: two
+  listing: 
+  start_date: 2017-01-20 13:59:47
+  end_date: 2017-01-20 13:59:47
+  price_@ernight: 1
+  total_price: 1
